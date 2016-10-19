@@ -18,4 +18,4 @@
 # #p arr.select { |element| element % 3 == 0 }
 # puts "\n\n"
 
-puts arr = (1..10000).select { |element| element % 3 == 0 }.to_a.sample(23).reject {|n| n < 5000}.sort.reverse.to_a.sample(6)
+puts (1..10000).select { |element| element % 3 == 0 }.to_a.reject {|n| n < 5000}.sort.reverse.to_a.sample(6)
