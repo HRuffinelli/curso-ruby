@@ -16,9 +16,21 @@ class Persona
     @@personas.select { |persona| persona.apellido == apellido }
   end
 
+  def self.buscar(apellido)
+    @@personas.each do |persona| 
+      if (persona.apellido == apellido)
+        puts "#{persona.nombre} #{persona.apellido}"
+      end
+    end
+  end
+
   #Tener un método que retorne el nombre y el apellido de la persona.
   def to_s
     "Nombre: #{nombre} - Apellido: #{apellido}"
+  end
+
+  def funcion(algo)
+    puts "#{algo} fue lo que enviaste"
   end
 end
 
@@ -28,8 +40,12 @@ p2 = Persona.new("Juan", "Benitez")
 p3 = Persona.new("Ermenindo", "Perez")
 p4 = Persona.new("Romina", "Benitez")
 
-puts Persona.search("Perez")
+# puts Persona.search("Perez")
+Persona.buscar("Perez")
+
+# p1.funcion("Fulano")
+# p1.search("Perez")
 
 # Debería imprimir
 # => Juan Perez
-# => Juana Perez
+# => Juana Perezd
