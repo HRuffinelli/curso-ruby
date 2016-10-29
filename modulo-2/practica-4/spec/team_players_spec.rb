@@ -19,7 +19,7 @@ describe "Players" do
   end
 
   context "check results" do
-  	subject(:team) { Team.new("Grupo") }
+	subject(:team) { Team.new("Grupo") }
 	it "agrega uno o mas jugadores" do
 	  is_expected.to respond_to(:add_players).with_unlimited_arguments
 	end
